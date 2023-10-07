@@ -57,7 +57,7 @@ resource "aws_subnet" "database" {
   tags = merge(
     var.common_tags,
     {
-      Name = "${var.project_name}-private-${local.azs[count.index]}"
+      Name = "${var.project_name}-database-${local.azs[count.index]}"
     }
   )
 }
